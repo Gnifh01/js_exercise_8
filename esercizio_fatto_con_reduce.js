@@ -1,12 +1,11 @@
+/* QUESTO ESERCIZO È FATTO CON IL METODO REDUCE() PER ESERCITAZIONE PERSONALE, NON C'ENTRA NULLA CON LA TRACCIA*/
+ 
 function calculateAverageAge(persons) {
   let allAge = [];
   for (let i = 0; i < persons.length; i++) {
     allAge.push(persons[i].age);
-  } 
-  let sum = 0;
-  for (let i = 0; i < allAge.length; i++) {
-    sum += allAge[i];
-  }                                           
+  }
+  let sum = allAge.reduce((sum, current) => sum + current, 0);
   let media = sum / allAge.length;
   return `La media di tutte le età è: ${media}!`;
 }
@@ -27,5 +26,3 @@ const persons = [
 const averageAge = calculateAverageAge(persons);
 console.log(persons);
 console.log(averageAge);
-
-/* let sum = allAge.reduce((sum, current) => sum + current, 0); */
