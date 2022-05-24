@@ -1,13 +1,9 @@
 function calculateAverageAge(persons) {
-  let allAge = [];
-  for (let i = 0; i < persons.length; i++) {
-    allAge.push(persons[i].age);
-  } 
   let sum = 0;
-  for (let i = 0; i < allAge.length; i++) {
-    sum += allAge[i];
+  for (let i = 0; i < persons.length; i++) {
+    sum += persons[i].age;
   }                                           
-  let media = sum / allAge.length;
+  let media = sum / persons.length;
   return `La media di tutte le età è: ${media}!`;
 }
 
